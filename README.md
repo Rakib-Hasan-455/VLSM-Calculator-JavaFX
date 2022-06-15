@@ -10,7 +10,7 @@ VLSM Calculator is a JavaFX desktop application with which we can calculate any 
 Main Window <br>
 ![Main window](Pictures/1.JPG "VLSM Calculator")
   
-## `Customer`
+## `Calculated VLSM`
 Calculated VLSM <br>
 ![Calculated VLSM](Pictures/2.JPG "VLSM Calculated") <br> 
   
