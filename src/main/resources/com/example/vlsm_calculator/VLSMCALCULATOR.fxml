@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vlsm_calculator.VLSMController">
+   <children>
+      <MFXTextField fx:id="netAddrTF" floatMode="BORDER" floatingText="Major Network" layoutX="205.0" layoutY="30.0" prefHeight="38.0" prefWidth="120.0" promptText="10.0.0.0" />
+      <MFXTextField fx:id="maskTF" floatMode="BORDER" floatingText="Mask" layoutX="372.0" layoutY="30.0" prefHeight="38.0" prefWidth="120.0" promptText="/8" />
+      <MFXButton fx:id="NetAddrBtn" layoutX="527.0" layoutY="33.0" onAction="#NetAddrBtn" style="-fx-background-color: lightcyan; -fx-border-color: gray;" text="Validate &amp; Set" />
+      <MFXTextField fx:id="noOfSubnetTF" floatingText="No. of Subnets" layoutX="205.0" layoutY="91.0" prefHeight="38.0" prefWidth="120.0" promptText="2" />
+      <MFXButton fx:id="noOfSubnetBtn" layoutX="527.0" layoutY="95.0" onAction="#noOfSubnetBtn" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: lightcyan; -fx-border-color: gray;" text="Set" />
+      <Label layoutX="123.0" layoutY="37.0" text="Step 1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="98.0" text="Step 2">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="subnetNameTF" floatingText="Subnet Name" layoutX="205.0" layoutY="154.0" prefHeight="38.0" prefWidth="120.0" promptText="C" />
+      <Label layoutX="123.0" layoutY="161.0" text="Step 3">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="subnetHostTF" floatingText="Total Host" layoutX="372.0" layoutY="154.0" prefHeight="38.0" prefWidth="120.0" promptText="2000" />
+      <MFXButton fx:id="addBtn" layoutX="527.0" layoutY="160.0" onAction="#addBtn" prefHeight="27.0" prefWidth="96.0" rippleColor="#bdbdbd" style="-fx-background-color: lightcyan; -fx-border-color: gray;" text="Add" />
+      <MFXButton fx:id="CalculateBtn" layoutX="313.0" layoutY="410.0" onAction="#CalculateBtn" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: lightcyan; -fx-border-color: gray;" text="Calculate" />
+      <TableView fx:id="subnetTable" layoutX="31.0" layoutY="218.0" prefHeight="180.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="subnetNameCol" editable="false" prefWidth="316.0" sortable="false" style="-fx-alignment: center;" text="Subnet Name" />
+          <TableColumn fx:id="totalHostCol" editable="false" prefWidth="294.0" sortable="false" style="-fx-alignment: center;" text="Total Host" />
+        </columns>
+      </TableView>
+      <TableView fx:id="vlsmCalcTable" layoutX="29.0" layoutY="453.0" prefHeight="200.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="netNameCol" prefWidth="70.0" style="-fx-alignment: center;" text="Net Name" />
+          <TableColumn fx:id="noOfHostCol" prefWidth="70.0" style="-fx-alignment: center;" text="No. of Host" />
+            <TableColumn fx:id="allocSizeCol" prefWidth="85.0" style="-fx-alignment: center;" text="Allocated Size" />
+            <TableColumn fx:id="netAddrCol" prefWidth="75.0" style="-fx-alignment: center;" text="Net Address" />
+            <TableColumn fx:id="firstAddrCol" prefWidth="75.0" style="-fx-alignment: center;" text="1st Address" />
+            <TableColumn fx:id="lastAddrCol" prefWidth="75.0" style="-fx-alignment: center;" text="Last Address" />
+            <TableColumn fx:id="broadCastAddrCol" prefWidth="93.0" style="-fx-alignment: center;" text="Bcast Address" />
+            <TableColumn fx:id="maskCol" prefWidth="72.0" style="-fx-alignment: center;" text="Mask" />
+        </columns>
+      </TableView>
+      <Label layoutX="123.0" layoutY="413.0" text="Step 4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXButton layoutX="313.0" layoutY="668.0" onAction="#resetBtn" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: lightcyan; -fx-border-color: gray;" text="Reset" />
+      <Label fx:id="step1Label" layoutX="9.0" layoutY="21.0" prefHeight="55.0" prefWidth="107.0" text=" " textFill="#00a421">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font></Label>
+      <Label fx:id="step2Label" layoutX="55.0" layoutY="101.0" text="     " textFill="#00a421">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Label>
+      <Label fx:id="step3Label" layoutX="55.0" layoutY="163.0" text="     " textFill="#00a421">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Label>
+      <Label fx:id="step4Label" layoutX="55.0" layoutY="416.0" text="     " textFill="#00a421">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
